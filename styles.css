@@ -1,9 +1,7 @@
-/* Përditësim i përgjithshëm */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -12,9 +10,6 @@ body {
     background: #0d0d0d;
     overflow: auto;
     margin: 0;
-    width: 100%;
-    overflow-x: hidden; /* Shmangni çdo skroll horizontal */
-    width: 100%
 }
 
 .background {
@@ -26,12 +21,11 @@ body {
     z-index: -1;
 }
 
-/* Stili për imazhin në anën e majtë */
 .background-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 40%; /* Pjesa e mbuluar (40% e faqes nga e majta) */
+    width: 40%; 
     height: 100vh;
     background-image: url('backgroundpic\ (2\).png');
     background-size: cover;
@@ -39,7 +33,6 @@ body {
     z-index: -1;
 }
 
-/* Unique Header */
 header {
     position: relative;
     width: 100%;
@@ -52,7 +45,6 @@ header {
 
 .navbar {
     display: flex;
-    position: fixed;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
@@ -92,7 +84,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -100,7 +91,7 @@ header {
     height: 100vh;
     padding: 20px;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 150px;
 }
 
 .hero-top h1 {
@@ -139,34 +130,30 @@ button:hover {
     box-shadow: 0 0 20px #00ffcc;
 }
 
-/* Efekti i ndriçimit për "CyberSecure AI" */
 .highlight {
     color: #00ffcc;
     text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
 @media (max-width: 768px) {
     body {
-        min-height: 80vh; /* Zvogëlo lartësinë e trupit */
+        min-height: 80vh; 
     }
 
     .hero {
-        min-height: 60vh; /* Zvogëlo lartësinë e seksionit hero */
+        min-height: 60vh; 
         padding: 30px 10px;
     }
 
     .background-image {
-        height: 40vh; /* Bëj imazhin më të vogël */
+        height: 40vh; 
     }
 }
 
-/* Për pajisje me gjerësi deri në 768px */
 @media (max-width: 768px) {
-    /* Fshijmë navbar-in, por JO gjithë header-in */
     .navbar {
         display: none;
     }
 
-    /* Hero section duhet të jetë më kompakt */
     .hero {
         margin-top: 200px;
         height: auto;
@@ -193,9 +180,6 @@ button:hover {
 }
 
 
-
-/* About */
-
 .about-section {
     background:#0d0d0d;
     color: white;
@@ -210,8 +194,8 @@ button:hover {
     margin-top: 40px;
 }
 .about-card p {
-    color: #fff; /* Ngjyra e tekstit */
-    text-align: left; /* Teksti është i rregulluar majtas */
+    color: #fff; 
+    text-align: left; 
   }
 
 .about-heading {
@@ -254,25 +238,24 @@ button:hover {
     opacity: 0.8;
     margin-bottom: 20px;
 }
-/* Responsivitet për ekranët më të vegjël */
 @media (max-width: 768px) {
     .about-section {
         margin-top: 0px;
     }
 
     .about-cards {
-        flex-direction: column; /* Kartat do të shfaqen njëra mbi tjetrën */
+        flex-direction: column; 
         align-items: center;
     }
 
     .about-card {
-        margin-bottom: 30px; /* Hapësirë midis kartave kur ato janë njëra mbi tjetrën */
-        min-width: 100%; /* Siguron që kartat të mbushin tërë gjerësinë e ekranit */
+        margin-bottom: 30px; 
+        min-width: 100%; 
     }
 }
 
 .features-section {
-    background-color: #0d0d0d; /* Matches the rest of your site */
+    background-color: #0d0d0d; 
     padding: 60px 20px;
     text-align: center;
     color: white;
@@ -281,7 +264,7 @@ button:hover {
   
   .features-section .section-heading {
     font-size: 2.5rem;
-    color: #00ffcc; /* Highlight color consistent with the site */
+    color: #00ffcc;
     margin-bottom: 40px;
   }
   
@@ -293,30 +276,30 @@ button:hover {
   }
   
   .feature-box {
-    flex: 1 1 calc(45% - 20px); /* 45% width with a gap */
-    background-color: #1a1a1a; /* Matches the card background in your other sections */
+    flex: 1 1 calc(45% - 20px);
+    background-color: #1a1a1a; 
     color: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 255, 204, 0.2), 0 6px 20px rgba(0, 255, 204, 0.1); /* Subtle consistent shadow */
+    box-shadow: 0 4px 8px rgba(0, 255, 204, 0.2), 0 6px 20px rgba(0, 255, 204, 0.1); 
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother easing */
+    transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
   }
   
   
   .feature-left {
-    transform: translateX(-80px); /* More dramatic start from the left */
+    transform: translateX(-80px);
   }
   
   .feature-right {
-    transform: translateX(80px); /* More dramatic start from the right */
+    transform: translateX(80px); 
   }
   
   
   .feature-box h3 {
     font-size: 1.8rem;
-    color: #00ffcc; /* Consistent title color */
+    color: #00ffcc; 
     margin-bottom: 15px;
   }
   
@@ -325,28 +308,25 @@ button:hover {
     opacity: 0.8;
   }
   
-  /* Animation triggers */
   .feature-box.in-view {
     opacity: 1;
-    transform: translateX(0); /* Smoothly moves to position */
+    transform: translateX(0); 
   }
-  /* Responsivitet për ekranë shumë të vegjël (telefona të vegjël) */
 @media (max-width: 480px) {
     .feature-box {
-      padding: 20px; /* Zvogëlon padding për të kursyer hapësirë */
-      border-radius: 8px; /* Redukton border-radius për një pamje më kompakte */
+      padding: 20px; 
+      border-radius: 8px; 
     }
   
     .feature-box h3 {
-      font-size: 1.2rem; /* Zvogëlon më tej madhësinë e titullit */
+      font-size: 1.2rem; 
     }
   
     .feature-box p {
-      font-size: 0.85rem; /* Zvogëlon madhësinë e tekstit */
+      font-size: 0.85rem; 
     }
   }
 
-/* Seksioni bazë */
 #how-it-works {
     background-color: #0d0d0d;
     color: white;
@@ -367,7 +347,6 @@ button:hover {
     opacity: 0.8;
 }
 
-/* Kontejneri i hapave */
 .steps-container {
     display: flex;
     justify-content: center;
@@ -375,7 +354,6 @@ button:hover {
     align-items: center;
 }
 
-/* Stili për hapin e zakonshëm */
 .step {
     background-color: #0a0a0a;
     color: white;
@@ -390,7 +368,6 @@ button:hover {
     transition: transform 0.4s, box-shadow 0.4s;
 }
 
-/* Efekti kur afron mausin */
 .step:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 255, 204, 0.3);
@@ -414,21 +391,18 @@ button:hover {
     height: 300%;
 }
 
-/* Stili për titullin dhe përshkrimin */
 .step h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #00ffcc;
 }
 
-/* Step i theksuar (always highlighted) */
 .highlighted-step {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 255, 204, 0.3);
     background: linear-gradient(45deg, rgba(0, 255, 204, 0.2), rgba(0, 255, 204, 0.4));
 }
 
-/* Teksti dhe ngjyra specifike për step të theksuar */
 .highlighted-step h3 {
     color: #00ffee;
 }
@@ -437,7 +411,6 @@ button:hover {
     color: #ddd;
 }
 
-/* Arrow i dukshëm gjithmonë */
 .highlighted-step .arrow {
     opacity: 1;
 }
@@ -447,7 +420,6 @@ button:hover {
     color: #bbb;
 }
 
-/* Shigjeta */
 .arrow {
     font-size: 2rem;
     color: #00ffcc;
@@ -463,7 +435,6 @@ button:hover {
     opacity: 1;
 }
 
-/* Stili për Step 2 që gjithmonë qëndron i theksuar */
 .highlighted-step {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 255, 204, 0.3);
@@ -474,24 +445,22 @@ button:hover {
     height: 300%;
     background: linear-gradient(45deg, rgba(0, 255, 204, 0.3), rgba(0, 255, 204, 0.4));
 }
-/* Responsiviteti */
 @media (max-width: 768px) {
     .steps-container {
         flex-direction: column;
-        gap: 20px; /* Hapësirë më e vogël midis hapave për ekranët më të vegjël */
+        gap: 20px; 
     }
 
     .step {
-        max-width: 100%; /* Zgjero hapin për të mbushur hapësirën në ekran të vogël */
+        max-width: 100%;
     }
 
     .arrow {
-        right: -20px; /* Vendosja e shigjetave më afër për pajisjet e vogla */
+        right: -20px; 
     }
 }
 
 
-/* Seksioni i shërbimeve */
 .services-section {
     padding: 60px 20px;
     text-align: center;
@@ -511,24 +480,7 @@ button:hover {
     margin-bottom: 40px;
     opacity: 0.8;
 }
-/* Responsiviteti për ekranët më të vegjël */
-@media (max-width: 768px) {
-    .steps-container {
-        flex-direction: column; /* Hapat do të shfaqen njëri pas tjetrit */
-        gap: 30px;
-    }
 
-    .step {
-        max-width: 100%; /* Siguron që secili hap të mbushë tërë ekranin */
-        margin-bottom: 30px; /* Hapësirë midis hapave */
-    }
-
-    .arrow {
-        right: -20px; /* Pozicionim i shigjetës për ekranët më të vegjël */
-    }
-}
-
-/* Kontejneri i kartave */
 .card-wrapper {
     display: flex;
     justify-content: center;
@@ -536,7 +488,6 @@ button:hover {
     gap: 20px;
 }
 
-/* Stili i kartave flip */
 .flip-card {
     width: 250px;
     height: 300px;
@@ -593,6 +544,94 @@ button:hover {
     font-size: 0.95rem;
     line-height: 1.5;
 }
+@media (max-width: 1024px) {
+    .card-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: nowrap;  
+    }
+  
+    .flip-card {
+      width: 33%;  
+      height: 400px;
+    }
+  
+    .flip-card img {
+      height: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-section {
+      padding: 40px 10px;
+    }
+  
+    .services-section .section-heading {
+      font-size: 1.8rem;
+    }
+  
+    .card-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: nowrap; 
+    }
+  
+    .flip-card {
+      width: 30%;  
+      height: 350px;
+    }
+  
+    .flip-card img {
+      height: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-section .section-heading {
+      font-size: 1.6rem;
+    }
+  
+    .card-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+      flex-wrap: nowrap;  
+    }
+  
+    .flip-card {
+      width: 48%; 
+      height: 300px;
+    }
+  
+    .flip-card img {
+      height: 45%;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .services-section .section-heading {
+      font-size: 1.4rem; 
+    }
+  
+    .card-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+      flex-wrap: nowrap;  
+    }
+  
+    .flip-card {
+      width: 48%;  
+      height: 250px;
+    }
+  
+    .flip-card img {
+      height: 40%;
+    }
+  }
+  
 
 .faq {
     margin-top: 60px;
@@ -622,19 +661,18 @@ button:hover {
     color: #555;
     font-size: 1rem;
 }
-/* Responsivitet për ekranë të vegjël (telefona) */
 @media (max-width: 480px) {
     .flip-card {
         width: 160px;
-        height: 200px; /* Kartat bëhen më të vogla në telefon */
+        height: 200px; 
     }
 
     .faq {
-        padding: 15px; /* Redukton padding në seksionin FAQ për të kursyer hapësirë */
+        padding: 15px; 
     }
 
     .faq h3 {
-        font-size: 1.4rem; /* Titulli FAQ bëhet edhe më i vogël */
+        font-size: 1.4rem;
     }
 
     .faq-item h4 {
@@ -646,17 +684,16 @@ button:hover {
     }
 
     .card-wrapper {
-        flex-direction: column; /* Kartat shfaqen njëra poshtë tjetrës */
+        flex-direction: column; 
         align-items: center;
     }
 
     .flip-card-inner {
-        padding: 15px; /* Zvogëlon padding-un brenda kartës për të ruajtur hapësirën */
+        padding: 15px; 
     }
 }
 
 
-  /* Case Study Section */
 .case-studies-section {
     background: #0d0d0d;
     color: white;
@@ -703,7 +740,6 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/* Extra Small Boxes Below Results */
 .extra-small-boxes {
     display: flex;
     flex-wrap: wrap;
@@ -726,34 +762,78 @@ button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 255, 204, 0.3);
 }
-/* Responsivitet për ekranë të vegjël (telefona) */
-@media (max-width: 480px) {
-    .case-study-section {
-        padding: 40px 10px; /* Redukton padding */
-    }
 
+/* 🎯 IMPROVED RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .case-study-cards {
+      justify-content: center;
+      gap: 25px;
+    }
+  
     .case-study-card {
-        padding: 20px; /* Zvogëlon padding brenda kartave */
-        border-radius: 8px;
+      flex: 1 1 45%;
+      max-width: 100%;
     }
-
+  }
+  
+  @media (max-width: 768px) {
+    .case-study-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+      padding: 0 10px;
+    }
+  
+    .case-study-card {
+      width: 100%;
+      padding: 25px;
+      border-radius: 12px;
+    }
+  
+    #case-studies .section-heading {
+      font-size: 32px;
+    }
+  
     .case-study-card h3 {
-        font-size: 1.2rem; /* Më i vogël për ekrane të vegjël */
+      font-size: 1.3rem;
     }
-
+  
     .case-study-card p {
-        font-size: 0.9rem;
+      font-size: 1rem;
     }
-
+  
     .extra-small-box {
-        padding: 6px 10px; /* Kuti më të vogla */
-        font-size: 0.9rem;
+      font-size: 0.9rem;
+      padding: 6px 10px;
     }
-}
+  }
+  
+  @media (max-width: 480px) {
+    .case-study-card {
+      padding: 20px;
+    }
+  
+    .case-study-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .case-study-card p {
+      font-size: 0.95rem;
+    }
+  
+    .extra-small-boxes {
+      gap: 8px;
+    }
+  
+    .extra-small-box {
+      font-size: 0.85rem;
+      padding: 5px 10px;
+    }
+  }
+  
 
-/* Contact Section */
 .contact-section {
-    background-color: #0d0d0d; /* Background i errët për seksionin */
+    background-color: #0d0d0d; 
     padding: 60px 20px;
     color: white;
     text-align: center;
@@ -762,11 +842,10 @@ button:hover {
 
 .contact-section .section-heading {
     font-size: 2.5rem;
-    color: #00ffcc; /* Ngjyra e theksuar */
+    color: #00ffcc; 
     margin-bottom: 40px;
 }
 
-/* Contact Form */
 .contact-form-container {
     max-width: 500px;
     margin: 0 auto;
@@ -807,10 +886,9 @@ button:hover {
     background-color: #00b3a1;
 }
 
-/* Contact Cards */
 .contact-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid me kolona të përshtatshme */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 20px;
     margin-top: 40px;
 }
@@ -856,19 +934,18 @@ button:hover {
     background-color: #00ffcc;
     color: white;
 }
-/* Responsivitet për ekranë të vegjël (telefona) */
 @media (max-width: 480px) {
     .contact-section {
-        padding: 40px 10px; /* Redukton padding */
+        padding: 40px 10px; 
     }
 
     .contact-form-container {
         max-width: 100%;
-        padding: 15px; /* Redukton padding brenda formularit */
+        padding: 15px; 
     }
 
     .contact-cards {
-        grid-template-columns: 1fr; /* Kartat shfaqen njëra poshtë tjetrës */
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
 
@@ -890,39 +967,63 @@ button:hover {
     }
 }
 
-footer {
-    background: #181717;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
 
-.footer-content {
+.footer {
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    padding: 60px 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-container {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Siguron që përmbajtja të rregullohet në ekranet më të vogla */
-}
-
-.footer-center,
-.footer-right {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer h3,
+  .footer h4 {
+    color: #00ffcc;
+    margin-bottom: 15px;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-contact {
     flex: 1;
-}
-
-.footer-center {
-    text-align: center;
-}
-
-.footer-right {
-    text-align: right;
-}
-
-.footer-right a {
-    color: #3498db;
+    min-width: 250px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a,
+  .footer-contact a {
+    color: #f2f2f2;
     text-decoration: none;
-}
-
-.footer-right a:hover {
-    text-decoration: underline;
-}
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover,
+  .footer-contact a:hover {
+    color: #00ffcc;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  

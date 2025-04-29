@@ -1,7 +1,7 @@
 document.querySelector(".glow-button").addEventListener("click", function(event) {
-  event.preventDefault(); // Parandalon sjelljen e parazgjedhur të butonit
+  event.preventDefault(); 
   document.querySelector("#about").scrollIntoView({
-      behavior: "smooth" // E bën scroll-in të ndodhi në mënyrë të qetë (smooth)
+      behavior: "smooth" 
   });
 });
 
@@ -13,7 +13,6 @@ canvas.height = window.innerHeight;
 
 let particlesArray;
 
-// Particle class
 class Particle {
   constructor(x, y, directionX, directionY, size, color) {
     this.x = x;
@@ -86,7 +85,7 @@ document.addEventListener("scroll", () => {
   const featureBoxes = document.querySelectorAll(".feature-box");
   featureBoxes.forEach((box) => {
     const boxTop = box.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight - 100; // Animation starts earlier for smoothness
+    const triggerPoint = window.innerHeight - 100; 
     if (boxTop < triggerPoint) {
       box.classList.add("in-view");
     }
